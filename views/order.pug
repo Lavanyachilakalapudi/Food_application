@@ -1,0 +1,26 @@
+head
+    title Order item
+    style.
+        button{
+        background-color: black;
+        color: White;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 15px;
+        margin-right: 2%;
+        }
+body
+    div(style="display:flex")
+        div(width="200px",height="100px",border="2px",style="margin:20px;padding:10px")
+                img(src=data.foodimage width="100px")
+                p=data.name
+                p=data.servedcapacity
+                p=data.price
+                p=data.location
+                p=data.remarks
+                p=data.delivery 
+        br
+        br
+    div 
+        form(action="/order/"+data.name) 
+            button Buy Item

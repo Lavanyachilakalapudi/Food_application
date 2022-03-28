@@ -1,0 +1,9 @@
+head
+    title Order Location
+body
+    h1 Select the prefered location
+    form(action="/selectloc" method="post")
+        select(name="mylocation")
+            each val in locations
+                option(value=val)=val 
+        button search

@@ -1,0 +1,49 @@
+head
+  title Food Home page
+  style.
+        button{
+        background-color: black;
+        color: White;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 15px;
+        margin-right: 2%;
+        }
+        a{
+        color: white;
+        }
+body 
+    form(action="")
+        h1="Welcome  " + username +" !"
+        div
+        button(formaction='/additem') Add Item
+        button(formaction='/orderitem') Order Food
+        button(formaction='/myorders') Myorders
+        button(formaction='/placeorders') Placeorders
+        button(formaction='/logout') Logout
+        label(for='loc') Choose the location:
+        select(name="mylocation" formaction="/home") 
+            each val in locations
+                    option(value=val, selected=val===locsel)=val
+            option(value="all" selected=val===locsel) all
+        button search
+    br
+    br
+    div(style="display:flex")
+        each i in items
+            if(locsel && i.location==locsel)
+                div(width="200px",height="100px",border="2px",style="margin:20px;padding:10px")
+                    a(href='/display?data=' +JSON.stringify(i))
+                        img(src=i.foodimage width="100px")
+                    p=i.name
+                    p="₹" + i.price
+                    a(href='/edit/' + i.name)
+                        button Edit Item
+            if(locsel===undefined || locsel==="all") 
+                div(width="200px",height="100px",border="2px",style="margin:20px;padding:10px")
+                    a(href='/display?data=' +JSON.stringify(i))
+                        img(src=i.foodimage width="200px" height="200px")
+                    p=i.name
+                    p="₹" +i.price 
+                    a(href='/edit/' + i.name)
+                        button Edit Item

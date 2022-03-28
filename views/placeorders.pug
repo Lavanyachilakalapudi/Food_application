@@ -1,0 +1,25 @@
+head
+    title place orders
+    style.
+        button{
+        background-color: black;
+        color: White;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 15px;
+        margin-right: 2%;
+        }
+body
+    div(style="display:flex")
+        each i in placeorder
+            if(i.user===username)
+                div(width="200px",height="100px",border="2px",style="margin:20px;padding:10px")
+                        img(src=i.item.foodimage width="100px")
+                        p=i.item.name
+                        p=i.item.servedcapacity
+                        p=i.item.price
+                        p=i.item.location
+                        p=i.item.remarks
+                        p=i.item.delivery 
+    form(action="/home")
+        button Home 

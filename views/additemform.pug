@@ -1,0 +1,26 @@
+doctype html
+head
+  title Add item form
+  style.
+    input{
+    padding: 10px;
+    }
+h1 Add Item form
+form(action='/additem' method='post' enctype="multipart/form-data")
+  input(type='text' name='food' placeholder='Enter the food item')
+  br
+  input(type='number' name='servedcapacity' placeholder='Served capacity')
+  br
+  input(type='number' name='price' placeholder='Enter the price')
+  br
+  input(type='text' name='remarks' placeholder='Enter the remarks')
+  br
+  input(type='text' name='location' placeholder='Enter the location')
+  br
+  select(name="dropdown")
+    option(value="Home delivery") Home delivery 
+    option(value="Take away") Take Away   
+  br
+  input(type='file' name='foodimage' placeholder='upload the file')
+  br
+  button Add item

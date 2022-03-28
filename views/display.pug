@@ -1,0 +1,14 @@
+html
+    head
+        title Display
+    body
+        ul 
+            each val in data
+                if(val.location===userloc)
+                    img(src=val.foodimage, alt="Food image")
+                    li=val.food
+                    li=val.servedcapacity
+                    li=val.price
+                    li=val.location
+                    li=val.remarks
+                    li=val.delivery
