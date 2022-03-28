@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Registration page</title>
+        <style>
+            form{
+                margin-left: 40%;
+                margin-top: 10%;
+            }
+            .name{
+                display: inline-block;
+                width: auto;
+                height: 35px;
+                padding: 10px;
+            }
+            button{
+                background-color: blue;
+                color: White;
+                border-radius: 10px;
+                padding: 5px;
+                font-size: 15px;
+                display: inline-block;
+                width: 80px;
+                height: 40px;
+                margin-top: 10px;
+                margin-left: 90px;
+            }
+            input{
+                padding: 15px;
+                margin-bottom: 10px;
+                margin-left: 15px;
+            }
+            #name,#pswd{
+                margin-left: 76px;
+            }
+            p{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/register" method="POST">
+            <h1>Food app Registration Page</h1>
+            Username: <input type="text" name="username" placeholder="Enter the Username" id="name" required><br>
+            Password: <input type="password" name="password" placeholder="Enter the password" id="pswd" required><br>
+            Confirm password: <input type="password" name="cpassword" placeholder="Re-enter the password" id="cpswd" required><br>
+            <button>Register</button>
+        </form>
+    </body>
+</html>
